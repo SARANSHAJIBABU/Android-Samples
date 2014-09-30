@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--The declare-styleable element specifies the View name. Each attribute has a name and format.-->
     <declare-styleable name="CustomView">
         <attr name="colorOfCircle" format="color"/>
         <attr name="labelOfCircle" format="string"></attr>

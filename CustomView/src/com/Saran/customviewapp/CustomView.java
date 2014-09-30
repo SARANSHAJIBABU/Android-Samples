@@ -19,9 +19,12 @@ public class CustomView extends View {
 		
 		circlePaint = new Paint();
 		
+		//get the attributes specified in attrs.xml using the name we included
 		TypedArray a = context.getTheme().obtainStyledAttributes(attrs,R.styleable.CustomView,0,0);
 		
 		try{
+			//get the text and colors specified using the names in attrs.xml
+			
 			colorOfCircle = a.getInt(R.styleable.CustomView_colorOfCircle,0);
 			colorOfLabel = a.getInt(R.styleable.CustomView_colorOfLabel, 0);
 			labelOfCircle = a.getString(R.styleable.CustomView_labelOfCircle);
@@ -43,11 +46,13 @@ public class CustomView extends View {
 		circlePaint.setStyle(Style.FILL);
 		circlePaint.setAntiAlias(true);
 		circlePaint.setColor(colorOfCircle);
+		//draw the circle
 		canvas.drawCircle(viewWidthHalf, viewHeightHalf, radius, circlePaint);
 		
 		circlePaint.setColor(colorOfLabel);
 		circlePaint.setTextAlign(Paint.Align.CENTER);
 		circlePaint.setTextSize(50);
+		//draw the text using the string attribute and chosen properties
 		canvas.drawText(labelOfCircle, viewWidthHalf, viewHeightHalf, circlePaint);
 	}
 

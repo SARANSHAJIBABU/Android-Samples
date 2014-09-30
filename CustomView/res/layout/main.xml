@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+   
     xmlns:sarans="http://schemas.android.com/apk/res/com.Saran.customviewapp" >
-
+ <!-- In order to specify the custom View and its attributes, we need to add an attribute to the parent layout element.
+  This specifies the namespace for our app, allowing us to use the attributes we defined within it.  -->
 	
     
     <com.Saran.customviewapp.CustomView
@@ -14,6 +16,7 @@
         sarans:colorOfCircle="#ff0099"
         sarans:colorOfLabel="#ffff66"
         sarans:labelOfCircle="Sarans">
+        <!-- The custom attributes are preceded by "custom:" and use the names we specified in our attributes XML file.  -->
         
     </com.Saran.customviewapp.CustomView>
 
