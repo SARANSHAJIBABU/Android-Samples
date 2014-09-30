@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:sarans="http://schemas.android.com/apk/res/com.Saran.customviewapp" >
+
+	
+    
+    <com.Saran.customviewapp.CustomView
+        android:id="@+id/customview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        sarans:colorOfCircle="#ff0099"
+        sarans:colorOfLabel="#ffff66"
+        sarans:labelOfCircle="Sarans">
+        
+    </com.Saran.customviewapp.CustomView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Click Me" 
+        android:onClick="clickButton"/>
+
+</RelativeLayout>
