@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity implements FragmentList.List
         mDialog = new FragmentDialog(item);
 
         //Dont need to create a transaction, since show contains create, add and commit
-        mDialog.show(mFragmentManager,item);
+        mDialog.show(mFragmentManager,item);//item is used as Tag of the fragment
     }
 
 
