@@ -1,0 +1,132 @@
+Android Studio
+===============
+
+Remove from project list
+ 	landing page -> highlight project-> press delete
+
+Project window in left pane
+	Android -> android project specific -> manifest, java,res (Recommended)
+	Project -> structure in disc
+			proguard-rules.pro -> minimise and offiscate code b4 uploading
+
+Structure window in left pane
+	Like outline in eclipse which shows methods and fields of both java and xml files
+
+Build Variants in left pane
+	Manages build process, Default is debug variant. For release add a release variant
+
+Favourites in left pane
+	Allows to add favourite files. To add, right click a file-> Add to favourites
+					To remove-> click the file in favourites window-> click -
+
+TODO in bottom pane
+	Tracks TODOS in current file or project like in eclipse 
+
+Android in bottom pane
+	Shows adb logs and filtering options
+
+Terminal in bottom pane
+	Access to Terminal
+
+Messages in bottom pane
+	Shows output of gradle build process
+	Memory Monitor -> shows memory usage in device
+
+Gradle in right pane
+	Shows gradle tasks in the build process and allows to add custom tasks
+
+Gear icons in these windows allows to make the window float and rearrange. 
+To reset all windows to original, window -> Restore Default Layout
+
+
+Preferences
+============
+
+AndroidStudio -> Preferences
+	IDE Settings
+	Editor-> Appearance-> Show line numbers
+		  -> Colors and Fonts, Create new scheme by clicking Save As and customise it. (Menlo,14,1.5)
+	To clear all preferences, Library/Preferences/ delete AndroidStudio folder and reopen
+
+Import Eclipse Projects
+Import Non Android Studio Project
+	To resolve target version related bugs, open build.gradle, change target and compile sdk
+	To resolve support library dependency bug, check SDK manager and see the installed support 
+		library and change the version in build.gradle according to that
+	To resolve JAVA version releated bugs or change  java6 to java7
+		file->project structure->app-> change source compatibility, target compatibility
+
+Menus and Toolbars
+==================
+
+Keyboard reference list -> Help->Default keymap reference
+Search everywhere -> shift+shift
+Recent files -> cmd+e
+
+Extra files
+===========
+
+local.properties -> stores location of android sdk [File->Project Structure-> SDK Location to set SDK and JDK locations]
+gradle.properties - >Specifies project wide gradle behaviour which overrides all other gradle settings
+					Line 10 -> manages memory of jvm
+2 gradle files
+==============
+	App level->App level info/settings
+				applicationId->global unique string identifies app in playstore/other stores
+				targetSDK & compileSDK must match api version installed locally since they use the tools from api files
+						better to use latest version of SDK for max device coverage
+				dependencies -> references to jars included in libs folder
+				   				references to version of support library package installed locally
+				  				references to remote repo in bintray.com
+								[Gradle checks locally first then go to remote repo]	
+								To check for latest version of a remote dependency, browse http://gradleplease.appspot.com/
+	Project level-> Dont change this file
+				classpath -> current version and package of gradle plugin
+				jcenter() -> linked to maven repository bintray.com to download remote dependencies jcenter.bintray.com
+									
+Adding Dependencies
+===================
+
+Add a jar to current project->
+			Copy and paste jar in libs folder, right click on it and Add as library which adds it as a dependency in gradle file
+Remove jar dependency->
+			file->project structure -> app -> dependencies -> select dependency -> - 
+
+ Add a jar for multiple projects to share -> Add jar to a module on which projects depends on
+		Create a new module from jar file
+				file->new module ->import jar or aar package ->select file->finish
+		Add module to project as a dependency
+				file ->project structure -> app -> dependencies->+->Module dependency-> select jar module that was created
+Add a maven dependency
+	file->project structure -> app -> dependencies ->+->library dependency which adds dependency in app level gradle
+	
+
+Version Control with Git
+========================
+
+Check git is installed :
+ 		AndroidStudio->preferences->Git ->Test  (default:usr/bin/git)
+[Download latest from git-scm.com and install and copy location of installed git and update in preference dialog :/usr/local/git/bin/git]
+
+Account Settings and operations
+		AndroidStudio->preferences->Github-fill in details
+		Share to github -> VCS import into version Control ->Share project on Github
+		Checkout from github -> in landing page ->Checkout from Version Control
+
+ 
+Edit and Debug
+==============
+
+ 	Show all method signatures -> ctrl + p
+	Autocomplete line -> cmd +shift+enter
+	Quickfix -> alt/opt + enter
+	Refactor -> highlight -> refactor-> rename
+	Refactor a block code -> ctrl+t (Refactor->Refactor this) [A list of all refactor options displayed]
+
+Memory Monitoring Tool
+======================
+
+Open from list in lower left corner or Memory monitor tab in the bottom pane
+Shows apps memory usage
+
+	
