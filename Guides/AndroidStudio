@@ -129,4 +129,12 @@ Memory Monitoring Tool
 Open from list in lower left corner or Memory monitor tab in the bottom pane
 Shows apps memory usage
 
+Installation
+============
+
+Java 6 runtime for OSX from Apple for Android Studio
+Latest JDK for mac from Oracle for Android
+
+In case of java not found error, 
+AndroidStudio->Show PackageContents->Contents->info.plist->jvm version 1.8*(if u have Java 1.8)
 	
