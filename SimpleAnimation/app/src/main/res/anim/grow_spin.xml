@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
     <!-- Animations inside a set happens concurrently. startOffset specifies when should an animation start
     w.r.to the beginning of first animation in set.-->
     <scale android:toXScale="8.0" android:toYScale="8.0"
@@ -11,5 +12,6 @@
         android:duration="500"></alpha>
     <rotate android:fromDegrees="0" android:toDegrees="180"
         android:pivotX="50%" android:pivotY="50%"
-        android:duration="500"></rotate>
+        android:duration="500"
+        android:interpolator="@android:anim/overshoot_interpolator"></rotate>
 </set>
