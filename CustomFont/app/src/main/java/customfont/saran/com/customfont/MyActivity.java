@@ -14,6 +14,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
+
         textView = (TextView) findViewById(R.id.textview);
         //Assets folder should be directly in main folder and not inside res
         Typeface customFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-BoldItalic.ttf");
