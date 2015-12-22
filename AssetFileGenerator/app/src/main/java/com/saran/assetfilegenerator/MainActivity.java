@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         try {
-            ((ImageView)findViewById(R.id.profile)).setBackground(new GifDrawable(getResources().getAssets(), "dp.gif");
-         //   ((ImageView)findViewById(R.id.profile)).setBackground(new GifDrawable(getResources().getAssets(), Asset.DP.getPath()));
+            //((ImageView)findViewById(R.id.profile)).setBackground(new GifDrawable(getResources().getAssets(), "dp.gif");
+            ((ImageView)findViewById(R.id.profile)).setBackground(new GifDrawable(getResources().getAssets(), Asset.DP.getPath()));
         }catch (IOException e) {
             e.printStackTrace();
         }
